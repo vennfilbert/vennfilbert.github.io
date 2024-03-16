@@ -2,7 +2,7 @@
 - 👀 I’m interested in Cyber Security
 - 🌱 I’m currently learning Front-end and Security Operation Control
 - 💞️ I’m looking to collaborate on more projects
-- 📫 How to reach me (instagram: @vennfilberttt, discord: vennneve)
+- 📫 How to reach me (instagram: @vennfilbert, discord: vennneve)
 - 😄 Pronouns: He/Him
 - ⚡ Fun fact: Simple
 
