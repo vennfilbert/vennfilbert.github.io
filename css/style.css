@@ -1,0 +1,261 @@
+/* -------------------- */
+/* General & Root Styles */
+/* -------------------- */
+:root {
+    --bg-color: #222; /* Dark Charcoal */
+    --text-color: #f4f4f4; /* White */
+    --accent-color: #00bfff; /* Deep Sky Blue */
+    --card-bg-color: #333;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* As per documentation [cite: 57] */
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    font-weight: 700; /* Bold for titles [cite: 58] */
+    margin-bottom: 1rem;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+section {
+    padding: 4rem 0;
+}
+
+/* -------------------- */
+/* Navigation */
+/* -------------------- */
+nav {
+    background-color: var(--card-bg-color);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+/* -------------------- */
+/* Hero Section */
+/* -------------------- */
+.hero {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.hero .subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.hero-links .btn {
+    margin: 0.5rem;
+}
+
+/* -------------------- */
+/* Buttons and Links */
+/* -------------------- */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #00a0cc;
+}
+
+.btn-secondary {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+}
+
+
+/* -------------------- */
+/* Skills Section */
+/* -------------------- */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.skills-grid span {
+    background-color: var(--card-bg-color);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+/* -------------------- */
+/* Projects Section */
+/* -------------------- */
+.projects-container {
+    display: flex;
+    flex-direction: column; /* Mobile-first: cards stack vertically [cite: 114, 115] */
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: var(--card-bg-color);
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.project-card h3 {
+    color: var(--accent-color);
+}
+
+.project-tech {
+    display: flex;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.project-tech span {
+    background-color: #444;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+    border-radius: 3px;
+}
+
+.project-card .btn-secondary {
+    margin-top: auto; /* Pushes button to the bottom of the card */
+    align-self: flex-start;
+}
+
+/* -------------------- */
+/* Footer */
+/* -------------------- */
+footer {
+    background-color: var(--card-bg-color);
+    text-align: center;
+    padding: 3rem 0;
+}
+
+footer .contact-email {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 1rem 0;
+}
+
+footer .social-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 1.1rem;
+}
+
+footer .social-links a:hover {
+    color: var(--accent-color);
+}
+
+footer .copyright {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+
+/* -------------------- */
+/* Responsive Design - Media Queries [cite: 92, 116] */
+/* -------------------- */
+@media (min-width: 768px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    /* Solution for Responsive Project Layout [cite: 117, 118, 119, 120] */
+    .projects-container {
+        flex-direction: row; /* Change to horizontal layout on larger screens */
+        flex-wrap: wrap; /* Allow cards to wrap to the next line */
+        justify-content: space-between;
+    }
+
+    .project-card {
+        width: calc(50% - 1rem); /* Two cards per row with a gap */
+    }
+}
+
+@media (min-width: 1024px) {
+    .project-card {
+         width: calc(33.333% - 1.5rem); /* Three cards per row on desktop */
+    }
+}
