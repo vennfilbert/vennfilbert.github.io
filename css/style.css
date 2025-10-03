@@ -2,10 +2,18 @@
 /* General & Root Styles */
 /* -------------------- */
 :root {
-    --bg-color: #222; /* Dark Charcoal */
-    --text-color: #f4f4f4; /* White */
-    --accent-color: #00bfff; /* Deep Sky Blue */
+    --bg-color: #222;
+    /* Dark Charcoal */
+    --text-color: #f4f4f4;
+    /* White */
+    --accent-color: #00bfff;
+    /* Deep Sky Blue */
     --card-bg-color: #333;
+}
+
+html {
+    /* Ensures smooth-scrolled sections don't hide under the sticky nav */
+    scroll-padding-top: 80px;
 }
 
 * {
@@ -14,8 +22,12 @@
     padding: 0;
 }
 
+
+
+
 body {
-    font-family: 'Roboto', sans-serif; /* As per documentation [cite: 57] */
+    font-family: 'Roboto', sans-serif;
+    /* As per documentation */
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
@@ -27,8 +39,11 @@ body {
     margin: 0 auto;
 }
 
-h1, h2, h3 {
-    font-weight: 700; /* Bold for titles [cite: 58] */
+h1,
+h2,
+h3 {
+    font-weight: 700;
+    /* Bold for titles */
     margin-bottom: 1rem;
 }
 
@@ -59,12 +74,14 @@ nav .container {
     align-items: center;
 }
 
-nav ul {
+.nav-links {
+    /* UPDATED: was nav ul */
     display: flex;
     list-style: none;
 }
 
-nav ul li {
+.nav-links li {
+    /* UPDATED: was nav ul li */
     margin-left: 1.5rem;
 }
 
@@ -76,6 +93,12 @@ nav a {
 
 nav a:hover {
     color: var(--accent-color);
+}
+
+.nav-logo img {
+    height: 40px;
+    width: auto;
+    vertical-align: middle;
 }
 
 /* -------------------- */
@@ -160,7 +183,7 @@ nav a:hover {
 /* -------------------- */
 .projects-container {
     display: flex;
-    flex-direction: column; /* Mobile-first: cards stack vertically [cite: 114, 115] */
+    flex-direction: column;
     gap: 2rem;
 }
 
@@ -197,7 +220,7 @@ nav a:hover {
 }
 
 .project-card .btn-secondary {
-    margin-top: auto; /* Pushes button to the bottom of the card */
+    margin-top: auto;
     align-self: flex-start;
 }
 
@@ -235,27 +258,94 @@ footer .copyright {
 
 
 /* -------------------- */
-/* Responsive Design - Media Queries [cite: 92, 116] */
+/* Responsive Design */
 /* -------------------- */
+
+/* --- Hamburger Menu (Mobile) --- */
+.hamburger {
+    display: none;
+    /* Hidden by default */
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        right: 0px;
+        top: 64px;
+        /* Should match nav height */
+        background-color: var(--card-bg-color);
+        height: calc(100vh - 64px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 60%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        padding-top: 2rem;
+    }
+
+    .nav-links li {
+        opacity: 0;
+        margin-left: 0;
+        margin-bottom: 2rem;
+    }
+
+    .hamburger {
+        display: block;
+        /* Visible on mobile */
+    }
+
+    .nav-active {
+        transform: translateX(0%);
+    }
+
+    .nav-active li {
+        opacity: 1;
+        transition: opacity 0.5s ease-in 0.3s;
+    }
+
+    /* Hamburger Animation */
+    .toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .toggle .line2 {
+        opacity: 0;
+    }
+
+    .toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
+
+/* --- Tablet and Desktop --- */
 @media (min-width: 768px) {
     h1 {
         font-size: 4rem;
     }
 
-    /* Solution for Responsive Project Layout [cite: 117, 118, 119, 120] */
     .projects-container {
-        flex-direction: row; /* Change to horizontal layout on larger screens */
-        flex-wrap: wrap; /* Allow cards to wrap to the next line */
+        flex-direction: row;
+        flex-wrap: wrap;
         justify-content: space-between;
     }
 
     .project-card {
-        width: calc(50% - 1rem); /* Two cards per row with a gap */
+        width: calc(50% - 1rem);
     }
 }
 
 @media (min-width: 1024px) {
     .project-card {
-         width: calc(33.333% - 1.5rem); /* Three cards per row on desktop */
+        width: calc(33.333% - 1.5rem);
     }
 }
