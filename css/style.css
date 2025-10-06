@@ -9,41 +9,40 @@
     --accent-color: #00bfff;
     /* Deep Sky Blue */
     --card-bg-color: #333;
+
+    /* Section Background Colors */
+    --bg-about-section: #2a2a2a;
+    --bg-skills-section: #222;
+    --bg-projects-section: #2a2a2a;
 }
-
-html {
-    /* Ensures smooth-scrolled sections don't hide under the sticky nav */
-    scroll-padding-top: 80px;
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-
-
 
 body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    /* Prevent horizontal scrollbar */
     font-family: 'Roboto', sans-serif;
-    /* As per documentation */
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
 }
 
 .container {
-    width: 90%;
-    max-width: 1100px;
+    width: 100%;
     margin: 0 auto;
+}
+
+.content-wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 h1,
 h2,
 h3 {
     font-weight: 700;
-    /* Bold for titles */
     margin-bottom: 1rem;
 }
 
@@ -75,13 +74,11 @@ nav .container {
 }
 
 .nav-links {
-    /* UPDATED: was nav ul */
     display: flex;
     list-style: none;
 }
 
 .nav-links li {
-    /* UPDATED: was nav ul li */
     margin-left: 1.5rem;
 }
 
@@ -127,6 +124,62 @@ nav a:hover {
     margin: 0.5rem;
 }
 
+/* --- Slider Styles --- */
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 60px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.3);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 2;
+    font-size: 18px;
+    line-height: 1;
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.slider:hover .slider-btn {
+    opacity: 1;
+}
+
+.slider-btn.prev {
+    left: 10px;
+}
+
+.slider-btn.next {
+    right: 10px;
+}
+
 /* -------------------- */
 /* Buttons and Links */
 /* -------------------- */
@@ -160,10 +213,17 @@ nav a:hover {
     color: var(--bg-color);
 }
 
+/* -------------------- */
+/* About Section */
+/* -------------------- */
+#about {
+    background-color: var(--bg-about-section);
+}
 
 /* -------------------- */
 /* Skills Section */
 /* -------------------- */
+
 .skills-grid {
     display: flex;
     flex-wrap: wrap;
@@ -181,6 +241,10 @@ nav a:hover {
 /* -------------------- */
 /* Projects Section */
 /* -------------------- */
+#projects {
+    background-color: var(--bg-projects-section);
+}
+
 .projects-container {
     display: flex;
     flex-direction: column;
@@ -188,12 +252,14 @@ nav a:hover {
 }
 
 .project-card {
-    background-color: var(--card-bg-color);
+    background-color: #1c1c1c;
     border-radius: 8px;
     overflow: hidden;
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
+    text-align: left;
+    /* Ensure text inside cards is left-aligned */
 }
 
 .project-card img {
@@ -264,7 +330,6 @@ footer .copyright {
 /* --- Hamburger Menu (Mobile) --- */
 .hamburger {
     display: none;
-    /* Hidden by default */
     cursor: pointer;
 }
 
@@ -281,7 +346,6 @@ footer .copyright {
         position: fixed;
         right: 0px;
         top: 64px;
-        /* Should match nav height */
         background-color: var(--card-bg-color);
         height: calc(100vh - 64px);
         display: flex;
@@ -301,7 +365,6 @@ footer .copyright {
 
     .hamburger {
         display: block;
-        /* Visible on mobile */
     }
 
     .nav-active {
@@ -336,11 +399,13 @@ footer .copyright {
     .projects-container {
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: center;
     }
 
     .project-card {
         width: calc(50% - 1rem);
+        max-width: 400px;
+        /* Prevent cards from getting too large */
     }
 }
 

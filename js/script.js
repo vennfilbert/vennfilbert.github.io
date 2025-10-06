@@ -5,39 +5,81 @@ document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
 
-    // Toggle the 'nav-active' class when the hamburger is clicked
     hamburger.addEventListener('click', () => {
         navLinks.classList.toggle('nav-active');
-
-        // Animate the hamburger icon
         hamburger.classList.toggle('toggle');
     });
 
 
     // 2. Smooth Scrolling Logic
-    // Select all links with a href starting with '#'
     const links = document.querySelectorAll('a[href^="#"]');
 
     links.forEach(link => {
-        link.addEventListener('click', function(e) {
-            // Prevent the default jump behavior
+        link.addEventListener('click', function (e) {
             e.preventDefault();
-
             const href = this.getAttribute('href');
             const targetElement = document.querySelector(href);
 
             if (targetElement) {
-                // Smoothly scroll to the target element
                 targetElement.scrollIntoView({
                     behavior: 'smooth'
                 });
             }
 
-            // Close the mobile menu after clicking a link
             if (navLinks.classList.contains('nav-active')) {
                 navLinks.classList.remove('nav-active');
                 hamburger.classList.remove('toggle');
             }
         });
     });
+
+    // 3. Hero Section Slider Logic
+    const slides = document.querySelector('.slides');
+    const slide = document.querySelectorAll('.slide');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+
+    let currentIndex = 0;
+    const slideCount = slide.length;
+    let autoSlideInterval;
+
+    const goToSlide = (index) => {
+        slides.style.transform = `translateX(-${index * 100}%)`;
+    };
+
+    const nextSlide = () => {
+        currentIndex = (currentIndex + 1) % slideCount;
+        goToSlide(currentIndex);
+    };
+
+    const prevSlide = () => {
+        currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+        goToSlide(currentIndex);
+    };
+
+    // Event Listeners for buttons
+    nextBtn.addEventListener('click', () => {
+        nextSlide();
+        resetAutoSlide();
+    });
+
+    prevBtn.addEventListener('click', () => {
+        prevSlide();
+        resetAutoSlide();
+    });
+
+    // Automatic sliding
+    const startAutoSlide = () => {
+        autoSlideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
+    };
+
+    const resetAutoSlide = () => {
+        clearInterval(autoSlideInterval);
+        startAutoSlide();
+    };
+
+    // Initialize slider
+    goToSlide(0);
+    startAutoSlide();
+
 });
