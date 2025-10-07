@@ -16,6 +16,17 @@
     --bg-projects-section: #2a2a2a;
 }
 
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+    background-color: var(--bg-color);
+    /* Fallback background */
+    scroll-padding-top: 80px;
+    /* Ensures smooth-scrolled sections don't hide under the sticky nav */
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -28,9 +39,14 @@ body {
     line-height: 1.6;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 .container {
     width: 100%;
     margin: 0 auto;
+    padding: 0 2rem;
 }
 
 .content-wrapper {
@@ -218,11 +234,15 @@ nav a:hover {
 /* -------------------- */
 #about {
     background-color: var(--bg-about-section);
+    padding: 2rem;
 }
 
 /* -------------------- */
 /* Skills Section */
 /* -------------------- */
+#skills {
+    padding: 2rem;
+}
 
 .skills-grid {
     display: flex;
@@ -243,6 +263,7 @@ nav a:hover {
 /* -------------------- */
 #projects {
     background-color: var(--bg-projects-section);
+    padding: 2rem;
 }
 
 .projects-container {
@@ -296,7 +317,7 @@ nav a:hover {
 footer {
     background-color: var(--card-bg-color);
     text-align: center;
-    padding: 3rem 0;
+    padding: 2rem;
 }
 
 footer .contact-email {
