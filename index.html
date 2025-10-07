@@ -91,27 +91,31 @@
         <section id="projects" class="container">
             <h2>Projects</h2>
             <div class="projects-container">
-                <div class="project-card">
-                    <img src="images/project-thumbnail-1.png" alt="Project 1 Thumbnail">
-                    <h3>Project Title One</h3>
-                    <p>A brief description of the project, its purpose, and the problem it solves. This showcases my
-                        ability to apply technical skills to real-world challenges.</p>
+                <div class="project-card project-gallery-trigger" data-gallery="safeus">
+                    <img src="images/safeus/SafeUs.png" alt="SafeUS Mobile App Screenshot">
+                    <h3>SafeUS Mobile App (Macquarie University)</h3>
+                    <p>A Flutter-based mobile app to report damaged public infrastructure. This course project involved
+                        building the UI, managing state, and integrating with Firebase for data storage.</p>
                     <div class="project-tech">
-                        <span>HTML/CSS</span>
-                        <span>JavaScript</span>
+                        <span>Flutter</span>
+                        <span>Dart</span>
+                        <span>Firebase</span>
                     </div>
-                    <a href="#link-to-project-source" class="btn-secondary">View Source Code</a>
+                    <a class="btn-secondary disabled" aria-disabled="true">Private Source Code</a>
                 </div>
-                <div class="project-card">
-                    <img src="images/project-thumbnail-2.png" alt="Project 2 Thumbnail">
-                    <h3>Project Title Two</h3>
-                    <p>A brief description of the project, its purpose, and the problem it solves. This showcases my
-                        ability to apply technical skills to real-world challenges.</p>
+                <div class="project-card project-gallery-trigger" data-gallery="securelink">
+                    <img src="images/securelink/SecureLink.png" alt="SecureLink Dashboard Thumbnail">
+                    <h3>SecureLink PPRL Platform (Macquarie University)</h3>
+                    <p>As a developer on a university-sponsored defensive security team, I integrated an XGBoost model
+                        into a web dashboard to analyze privacy-preserving record linkage (PPRL). The platform
+                        demonstrates the trade-off between privacy (using LDP and Bloom Filters) and model accuracy.</p>
                     <div class="project-tech">
                         <span>Python</span>
-                        <span>Security Scripting</span>
+                        <span>XGBoost</span>
+                        <span>React</span>
+                        <span>Bloom Filters</span>
                     </div>
-                    <a href="#link-to-project-source" class="btn-secondary">View Source Code</a>
+                    <a class="btn-secondary disabled" aria-disabled="true">Private Source Code</a>
                 </div>
             </div>
         </section>
@@ -126,9 +130,18 @@
                 <a href="https://www.linkedin.com/in/steven-filbert-681459230/">LinkedIn</a>
                 <a href="#link-to-github">GitHub</a>
             </div>
-            <p class="copyright">&copy; 2025 Steven Filbert</p>
+            <p class="copyright">&copy; 2025 venneve.com</p>
         </div>
     </footer>
+
+    <div id="gallery-modal" class="modal">
+        <span class="close-btn">&times;</span>
+        <div class="modal-content">
+            <a class="prev-btn">&#10094;</a>
+            <img id="modal-image" src="" alt="Project Screenshot">
+            <a class="next-btn">&#10095;</a>
+        </div>
+    </div>
 
     <script src="js/script.js"></script>
 </body>
