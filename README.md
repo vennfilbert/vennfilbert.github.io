@@ -1,21 +1,29 @@
 # Hi there, I'm Steven Filbert 👋
 
-I'm a recent **Bachelor of Cyber Security graduate** from Macquarie University with a passion for solving complex problems at the intersection of data, privacy, and security. I am actively seeking entry-level opportunities in the IT and cybersecurity sectors where I can apply my skills and continue to learn.
+I'm a recent **Bachelor of Cyber Security graduate** from Macquarie University, **specializing in Governance, Risk, and Compliance (GRC)**. I have a passion for solving complex problems at the intersection of data, privacy, and security, demonstrated through hands-on internship experience engineering privacy-preserving solutions. I am actively seeking junior analyst opportunities where I can apply my GRC knowledge and technical skills.
 
 ---
 
 ### 🔧 Technologies & Skills
 
-* **Cybersecurity:** Offensive Security, Digital Forensics, Data Privacy, Cryptography
-* **Programming & Data:** Python, SQL, JavaScript, HTML/CSS, Machine Learning (XGBoost)
-* **Tools & Cloud:** Git, VSCode, Microsoft Azure (AZ-900 in progress), Firebase, Flutter
+* **Cybersecurity & GRC:** Governance, Risk & Compliance (GRC), ISO 27001, Data Privacy, Digital Forensics (HD, 93), Offensive Security (HD, 88), Risk Assessment, Cryptography
+* **Programming & Data:** Python, SQL, Machine Learning (XGBoost)
+* **Tools & Cloud:** Microsoft Azure, Git, VSCode
+* **Familiar With:** JavaScript, HTML/CSS, Firebase, Flutter, Dart
 
 ---
 
 ### 🌱 What I'm Currently Working On
 
-* Building a file encryption tool with Python to deepen my understanding of applied cryptography.
-* Studying for the **Microsoft Azure Fundamentals (AZ-900)** certification.
+* Deepening my understanding of GRC frameworks like ISO 27001 and NIST.
+* Preparing for the **Microsoft Security, Compliance, and Identity Fundamentals (SC-900)** and **CompTIA Security+** certifications.
+* Exploring practical applications of applied cryptography.
+
+---
+
+### 🚀 Check out my Portfolio
+
+* **Live Portfolio Website:** https://vennfilbert.github.io
 
 ---
 
