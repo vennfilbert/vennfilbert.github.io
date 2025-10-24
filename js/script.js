@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 'images/safeus/ProfileScreen.png'
             ],
             'securelink': [
-                'images/securelink/XGBoost.gif'
+            
             ]
         };
 
