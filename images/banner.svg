@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 300" width="1280" height="300" role="img" aria-label="Steven Filbert — IT Service Desk and Technical Support, Sydney NSW, open to work">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0 L0 0 0 40" fill="none" stroke="#3EF2A0" stroke-opacity="0.045" stroke-width="1"/>
+    </pattern>
+    <radialGradient id="glow" cx="30%" cy="55%" r="60%">
+      <stop offset="0%" stop-color="#3EF2A0" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#3EF2A0" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="card">
+      <rect x="8" y="8" width="1264" height="284" rx="3"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1280" height="300" fill="#070B0A"/>
+
+  <g clip-path="url(#card)">
+    <rect x="8" y="8" width="1264" height="284" fill="#0B0F0E"/>
+    <rect x="8" y="8" width="1264" height="284" fill="url(#grid)"/>
+    <rect x="8" y="8" width="1264" height="284" fill="url(#glow)"/>
+    <rect x="8" y="8" width="1264" height="56" fill="#0E1413"/>
+  </g>
+
+  <rect x="8" y="8" width="1264" height="284" rx="3" fill="none" stroke="#3EF2A0" stroke-opacity="0.14" stroke-width="1"/>
+  <line x1="8" y1="64" x2="1272" y2="64" stroke="#3EF2A0" stroke-opacity="0.12" stroke-width="1"/>
+
+  <!-- header row -->
+  <text x="44" y="42" font-family="'JetBrains Mono',ui-monospace,monospace" font-size="12" letter-spacing="2.4" fill="#3EF2A0">REQ0000001</text>
+  <text x="176" y="42" font-family="'JetBrains Mono',ui-monospace,monospace" font-size="12" letter-spacing="2.4" fill="#566159">·  SERVICE DESK QUEUE  ·  VENNEVE</text>
+
+  <rect x="1092" y="24" width="148" height="26" rx="13" fill="#3EF2A0" fill-opacity="0.10" stroke="#3EF2A0" stroke-opacity="0.30" stroke-width="1"/>
+  <circle cx="1112" cy="37" r="3.5" fill="#3EF2A0"/>
+  <text x="1126" y="41" font-family="'JetBrains Mono',ui-monospace,monospace" font-size="10" letter-spacing="1.6" fill="#3EF2A0">OPEN TO WORK</text>
+
+  <!-- assignee block -->
+  <text x="44" y="116" font-family="'JetBrains Mono',ui-monospace,monospace" font-size="10.5" letter-spacing="3" fill="#566159">ASSIGNEE</text>
+  <text x="44" y="172" font-family="'Space Mono','JetBrains Mono',ui-monospace,monospace" font-size="46" font-weight="400" letter-spacing="19">
+    <tspan fill="#3EF2A0">STEVEN</tspan><tspan fill="#EAF3EE"> FILBERT</tspan>
+  </text>
+
+  <!-- priority / sla -->
+  <text x="1000" y="116" font-family="'JetBrains Mono',ui-monospace,monospace" font-size="10.5" letter-spacing="3" fill="#566159">PRIORITY</text>
+  <text x="1000" y="138" font-family="'JetBrains Mono',ui-monospace,monospace" font-size="13" letter-spacing="0.6" fill="#EAF3EE">P2 · Standard</text>
+  <text x="1000" y="164" font-family="'JetBrains Mono',ui-monospace,monospace" font-size="10.5" letter-spacing="3" fill="#566159">SLA</text>
+  <text x="1000" y="186" font-family="'JetBrains Mono',ui-monospace,monospace" font-size="13" letter-spacing="0.6" fill="#EAF3EE">Response within 24h</text>
+
+  <line x1="8" y1="214" x2="1272" y2="214" stroke="#3EF2A0" stroke-opacity="0.10" stroke-width="1"/>
+  <line x1="640" y1="214" x2="640" y2="292" stroke="#3EF2A0" stroke-opacity="0.08" stroke-width="1"/>
+
+  <!-- footer fields -->
+  <text x="44" y="244" font-family="'JetBrains Mono',ui-monospace,monospace" font-size="10.5" letter-spacing="3" fill="#566159">OBJECTIVE</text>
+  <text x="44" y="268" font-family="'JetBrains Mono',ui-monospace,monospace" font-size="13.5" letter-spacing="0.6" fill="#EAF3EE">IT Service Desk / Technical Support</text>
+
+  <text x="676" y="244" font-family="'JetBrains Mono',ui-monospace,monospace" font-size="10.5" letter-spacing="3" fill="#566159">STATUS</text>
+  <text x="676" y="268" font-family="'JetBrains Mono',ui-monospace,monospace" font-size="13.5" letter-spacing="0.6" fill="#7A8B83">Sydney NSW  ·  full work rights to Aug 2027</text>
+</svg>
