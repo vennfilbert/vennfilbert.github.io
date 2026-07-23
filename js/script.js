@@ -1,148 +1,188 @@
+/* ============================================================
+   VENNEVE — Steven Filbert
+   ============================================================ */
+
 document.addEventListener('DOMContentLoaded', () => {
 
-    // 1. Responsive Hamburger Menu Logic
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-    if (hamburger) {
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('nav-active');
-            hamburger.classList.toggle('toggle');
-        });
-    }
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    // 2. Smooth Scrolling Logic
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
-            if (navLinks.classList.contains('nav-active')) {
-                navLinks.classList.remove('nav-active');
-                hamburger.classList.remove('toggle');
-            }
-        });
+  /* ---------- Year ---------- */
+  const year = document.getElementById('year');
+  if (year) year.textContent = new Date().getFullYear();
+
+  /* ---------- Nav: mobile toggle ---------- */
+  const burger = document.getElementById('burger');
+  const navLinks = document.getElementById('navLinks');
+
+  const closeNav = () => {
+    navLinks.classList.remove('is-open');
+    burger.classList.remove('is-open');
+    burger.setAttribute('aria-expanded', 'false');
+  };
+
+  if (burger && navLinks) {
+    burger.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('is-open');
+      burger.classList.toggle('is-open', open);
+      burger.setAttribute('aria-expanded', String(open));
     });
 
-    // 3. Hero Section Slider Logic
-    const slides = document.querySelector('.slides');
-    if (slides) {
-        const slide = document.querySelectorAll('.slide');
-        const heroPrevBtn = document.querySelector('.slider .prev');
-        const heroNextBtn = document.querySelector('.slider .next');
-        let currentIndex = 0;
-        const slideCount = slide.length;
-        let autoSlideInterval;
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
 
-        const goToSlide = (index) => {
-            slides.style.transform = `translateX(-${index * 100}%)`;
-        };
-        const nextSlide = () => {
-            currentIndex = (currentIndex + 1) % slideCount;
-            goToSlide(currentIndex);
-        };
-        const prevSlide = () => {
-            currentIndex = (currentIndex - 1 + slideCount) % slideCount;
-            goToSlide(currentIndex);
-        };
-        const startAutoSlide = () => {
-            autoSlideInterval = setInterval(nextSlide, 5000);
-        };
-        const resetAutoSlide = () => {
-            clearInterval(autoSlideInterval);
-            startAutoSlide();
-        };
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeNav();
+    });
+  }
 
-        heroNextBtn.addEventListener('click', () => {
-            nextSlide();
-            resetAutoSlide();
-        });
-        heroPrevBtn.addEventListener('click', () => {
-            prevSlide();
-            resetAutoSlide();
-        });
+  /* ---------- Nav: hairline on scroll ---------- */
+  const nav = document.getElementById('nav');
+  const onScroll = () => {
+    if (nav) nav.classList.toggle('is-stuck', window.scrollY > 10);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
 
-        goToSlide(0);
-        startAutoSlide();
+  /* ---------- Hero: typed status line ---------- */
+  const target = document.getElementById('typetext');
+  if (target) {
+    const lines = [
+      'AZ-900 / MS-900 certified',
+      'ServiceNow + ITIL, built and documented',
+      'Splunk detection labs, Sydney based',
+      '3+ years front line, 100-150 people a shift'
+    ];
+
+    if (reduced) {
+      target.textContent = lines[0];
+    } else {
+      let li = 0, ci = 0, deleting = false;
+
+      const tick = () => {
+        const full = lines[li];
+        ci = deleting ? ci - 1 : ci + 1;
+        target.textContent = full.slice(0, ci);
+
+        let wait = deleting ? 26 : 52;
+
+        if (!deleting && ci === full.length) { wait = 2100; deleting = true; }
+        else if (deleting && ci === 0) { deleting = false; li = (li + 1) % lines.length; wait = 320; }
+
+        setTimeout(tick, wait);
+      };
+      tick();
     }
+  }
 
-    // 4. Reusable Modal Image Gallery Logic
-    const modal = document.getElementById('gallery-modal');
-    if (modal) {
-        const modalImg = document.getElementById('modal-image');
-        const closeBtn = document.querySelector('.close-btn');
-        const galleryPrevBtn = document.querySelector('.modal .prev-btn');
-        const galleryNextBtn = document.querySelector('.modal .next-btn');
+  /* ---------- Reveal on scroll ---------- */
+  const revealables = document.querySelectorAll('.reveal');
+  if (reduced || !('IntersectionObserver' in window)) {
+    revealables.forEach(el => el.classList.add('is-in'));
+  } else {
+    const io = new IntersectionObserver((entries, obs) => {
+      entries.forEach((entry, i) => {
+        if (!entry.isIntersecting) return;
+        setTimeout(() => entry.target.classList.add('is-in'), i * 70);
+        obs.unobserve(entry.target);
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
-        const galleries = {
-            'safeus': [
-                'images/safeus/HomeScreen.png',
-                'images/safeus/LoginScreen.png',
-                'images/safeus/SignupScreen.png',
-                'images/safeus/UploadScreen.png',
-                'images/safeus/ArticleScreen.png',
-                'images/safeus/StatusScreen.png',
-                'images/safeus/ReportDetailScreen.png',
-                'images/safeus/ProfileScreen.png'
-            ],
-            'securelink': [
-            
-            ]
-        };
+    revealables.forEach(el => io.observe(el));
+  }
 
-        let currentImages = [];
-        let currentImageIndex = 0;
+  /* ---------- Gallery ---------- */
+  const galleries = {
+    safeus: [
+      'images/safeus/HomeScreen.png',
+      'images/safeus/LoginScreen.png',
+      'images/safeus/SignupScreen.png',
+      'images/safeus/UploadScreen.png',
+      'images/safeus/ArticleScreen.png',
+      'images/safeus/StatusScreen.png',
+      'images/safeus/ReportDetailScreen.png',
+      'images/safeus/ProfileScreen.png'
+    ],
+    kerberoasting: [
+      'images/kerberoasting_troubleshooting_lab/01-dashboard.png',
+      'images/kerberoasting_troubleshooting_lab/02-raw-events.png',
+      'images/kerberoasting_troubleshooting_lab/03-extracted-table.png',
+      'images/kerberoasting_troubleshooting_lab/04-encryption-baseline.png',
+      'images/kerberoasting_troubleshooting_lab/05-detection.png',
+      'images/kerberoasting_troubleshooting_lab/06-source-ip-volume.png'
+    ],
+    servicenow: [
+      'images/servicenow/all-tickets-overview.png',
+      'images/servicenow/01-view-switch.png',
+      'images/servicenow/02-incident-logged.png',
+      'images/servicenow/03-incident-resolved.png',
+      'images/servicenow/04-vpn-escalation.png',
+      'images/servicenow/05-p1-major-incident.png'
+    ],
+    // Drop SecureLink dashboard screenshots in here when you have them.
+    securelink: []
+  };
 
-        function openModal(galleryKey, startIndex) {
-            currentImages = galleries[galleryKey];
-            if (!currentImages || currentImages.length === 0) return;
+  const modal = document.getElementById('modal');
+  const modalImg = document.getElementById('modalImg');
+  const modalCount = document.getElementById('modalCount');
+  const btnClose = document.getElementById('modalClose');
+  const btnPrev = document.getElementById('modalPrev');
+  const btnNext = document.getElementById('modalNext');
 
-            currentImageIndex = startIndex;
-            modalImg.src = currentImages[currentImageIndex];
-            modal.style.display = 'flex';
-        }
+  let shots = [];
+  let idx = 0;
+  let lastFocused = null;
 
-        function closeModal() {
-            modal.style.display = 'none';
-        }
+  const paint = () => {
+    modalImg.src = shots[idx];
+    modalImg.alt = `Project screenshot ${idx + 1} of ${shots.length}`;
+    modalCount.textContent = `${idx + 1} / ${shots.length}`;
+    const multi = shots.length > 1;
+    btnPrev.style.display = multi ? '' : 'none';
+    btnNext.style.display = multi ? '' : 'none';
+  };
 
-        function showNextImage() {
-            currentImageIndex = (currentImageIndex + 1) % currentImages.length;
-            modalImg.src = currentImages[currentImageIndex];
-        }
+  const open = key => {
+    shots = galleries[key] || [];
+    if (!shots.length) return;
+    idx = 0;
+    lastFocused = document.activeElement;
+    paint();
+    modal.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+    btnClose.focus();
+  };
 
-        function showPrevImage() {
-            currentImageIndex = (currentImageIndex - 1 + currentImages.length) % currentImages.length;
-            modalImg.src = currentImages[currentImageIndex];
-        }
+  const close = () => {
+    modal.classList.remove('is-open');
+    document.body.style.overflow = '';
+    if (lastFocused) lastFocused.focus();
+  };
 
-        document.querySelectorAll('.project-gallery-trigger').forEach(card => {
-            card.addEventListener('click', () => {
-                const galleryKey = card.getAttribute('data-gallery');
-                openModal(galleryKey, 0);
-            });
-        });
+  const step = n => {
+    if (!shots.length) return;
+    idx = (idx + n + shots.length) % shots.length;
+    paint();
+  };
 
-        closeBtn.addEventListener('click', closeModal);
-        galleryNextBtn.addEventListener('click', showNextImage);
-        galleryPrevBtn.addEventListener('click', showPrevImage);
+  document.querySelectorAll('.gallery-trigger').forEach(card => {
+    card.addEventListener('click', e => {
+      // let real links inside the card behave normally
+      if (e.target.closest('a')) return;
+      open(card.dataset.gallery);
+    });
+  });
 
-        window.addEventListener('click', (event) => {
-            if (event.target == modal) {
-                closeModal();
-            }
-        });
+  if (modal) {
+    btnClose.addEventListener('click', close);
+    btnPrev.addEventListener('click', () => step(-1));
+    btnNext.addEventListener('click', () => step(1));
+    modal.addEventListener('click', e => { if (e.target === modal) close(); });
 
-        document.addEventListener('keydown', (event) => {
-            if (modal.style.display === 'flex') {
-                if (event.key === 'ArrowRight') showNextImage();
-                else if (event.key === 'ArrowLeft') showPrevImage();
-                else if (event.key === 'Escape') closeModal();
-            }
-        });
-    }
+    document.addEventListener('keydown', e => {
+      if (!modal.classList.contains('is-open')) return;
+      if (e.key === 'Escape') close();
+      if (e.key === 'ArrowRight') step(1);
+      if (e.key === 'ArrowLeft') step(-1);
+    });
+  }
 });

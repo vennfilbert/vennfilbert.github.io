@@ -2,176 +2,473 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Steven Filbert | Personal Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Steven Filbert — IT Service Desk &amp; Technical Support</title>
+  <meta name="description"
+    content="Steven Filbert. IT service desk and technical support. ServiceNow and ITIL lab work, AZ-900 and MS-900 certified, Cyber Security graduate based in Sydney.">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta property="og:title" content="Steven Filbert — IT Service Desk &amp; Technical Support">
+  <meta property="og:description"
+    content="ServiceNow and ITIL lab work, AZ-900 and MS-900 certified, Cyber Security graduate based in Sydney.">
+  <meta property="og:type" content="website">
 
-    <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <nav>
-        <div class="container">
-            <ul class="nav-links">
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills & Technologies</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-        </div>
-    </nav>
+  <a class="skip" href="#main">Skip to content</a>
 
-    <header id="hero" class="hero">
-        <div class="container">
-            <h1>Steven Filbert</h1>
-            <p class="tagline">Cyber Security Graduate | Entry-Level IT Support & Help Desk Professional</p>
+  <nav class="nav" id="nav">
+    <div class="wrap nav__inner">
+      <a class="mark" href="#top" aria-label="Steven Filbert, home">
+        <span class="mark__badge"><span class="g">V</span><span class="w">N</span></span>
+        <span class="mark__text">venneve</span>
+      </a>
 
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#creds">Credentials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
 
-            <div class="slider">
-                <div class="slides">
-                    <div class="slide">
-                        <p class="subtitle">Microsoft 365 · Azure · Incident Handling · User Support</p>
-                    </div>
-                    <div class="slide">
-                        <p class="subtitle">Customer Service Supervisor @ Coles — 100–150+ users per shift</p>
-                    </div>
-                    <div class="slide">
-                        <p class="subtitle">Experience in data privacy, documentation, and secure systems</p>
-                    </div>
-                </div>
-                <button class="slider-btn prev" aria-label="Previous slide">&#10094;</button>
-                <button class="slider-btn next" aria-label="Next slide">&#10095;</button>
-            </div>
-            <div class="hero-links">
-                <a href="https://www.linkedin.com/in/steven-filbert-681459230/" class="btn">LinkedIn</a>
-                <a href="https://github.com/vennfilbert" class="btn">GitHub</a>
-                <a href="assets/Steven Filbert - CV.pdf" class="btn" download>Download Resume</a>
-            </div>
-        </div>
-    </header>
-
-    <main>
-        <section id="about" class="container">
-            <h2>About Me</h2>
-            <div class="content-wrapper">
-                <p>
-                    I’m a Cyber Security graduate from Macquarie University with a strong focus on
-                    <strong>IT Support and Help Desk roles</strong>. I bring hands-on experience supporting
-                    users, systems, and workflows in fast-paced environments, combined with a strong
-                    foundation in Microsoft 365 and Azure.
-                </p>
-                <p>
-                    Certified in <strong>Microsoft Azure Fundamentals (AZ-900)</strong> and
-                    <strong>Microsoft 365 Fundamentals (MS-900)</strong>, with practical exposure to Microsoft 365
-                    workflows and cloud fundamentals.
-                </p>
-                <p>
-                    I was promoted to <em>Customer Service Supervisor</em> at Coles after consistently
-                    supporting high customer volumes, resolving incidents, and coaching new staff.
-                    This role strengthened my ability to stay calm under pressure, document issues
-                    accurately, and escalate when required.
-                </p>
-
-                <p>
-                    During my <strong>Data Privacy & Security Research Internship</strong>, I worked on
-                    privacy-preserving data systems, producing technical documentation and evaluating
-                    trade-offs between data security and usability. I’m now focused on building a
-                    career in IT support where reliability, communication, and problem-solving matter.
-                </p>
-            </div>
-        </section>
-
-        <section id="skills" class="container">
-            <h2>Skills & Technologies</h2>
-            <div class="skills-grid">
-                <span>Microsoft Azure</span>
-                <span>Microsoft 365</span>
-                <span>Incident Handling</span>
-                <span>User Support</span>
-                <span>ServiceNow</span>
-                <span>Jira</span>
-                <span>Documentation</span>
-                <span>Python</span>
-                <span>SQL</span>
-            </div>
-        </section>
-
-        <section id="projects" class="container">
-            <h2>Projects</h2>
-            <div class="projects-container">
-                <div class="project-card project-gallery-trigger" data-gallery="safeus">
-                    <img src="images/safeus/SafeUs.png" alt="SafeUS Mobile App Screenshot">
-                    <h3>SafeUS Mobile App (Macquarie University)</h3>
-                    <p>
-                        A Flutter-based mobile application that allows users to submit incident reports
-                        with photos and location data. The project focused on building a reliable user
-                        interface and integrating Firebase authentication and cloud storage for secure,
-                        multi-user data submission.
-                    </p>
-                    <div class="project-tech">
-                        <span>Flutter</span>
-                        <span>Dart</span>
-                        <span>Firebase</span>
-                    </div>
-                    <a class="btn-secondary disabled" aria-disabled="true">Private Source Code</a>
-                </div>
-                <div class="project-card project-gallery-trigger" data-gallery="securelink">
-                    <img src="images/securelink/SecureLink.png" alt="SecureLink Dashboard Thumbnail">
-                    <h3>SecureLink PPRL Platform (Macquarie University)</h3>
-                    <p>
-                        A privacy-preserving record linkage platform developed as part of a university
-                        security project. I integrated an XGBoost model into a dashboard to analyze how
-                        privacy controls (LDP and Bloom Filters) impact data matching accuracy, producing
-                        documented evaluation results.
-                    </p>
-                    <div class="project-tech">
-                        <span>Python</span>
-                        <span>XGBoost</span>
-                        <span>React</span>
-                        <span>Bloom Filters</span>
-                    </div>
-                    <a href="assets/Steven Filbert - Data Privacy Project Summary.pdf" class="btn-secondary"
-                        target="_blank">View Project Summary (PDF)</a>
-                    <a class="btn-secondary disabled" aria-disabled="true">Private Source Code</a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer id="contact">
-        <div class="container">
-            <h2>Get in Touch</h2>
-            <p>Feel free to reach out via email or connect with me on social media.</p>
-            <p class="contact-email">steven7f@gmail.com</p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/steven-filbert-681459230/">LinkedIn</a>
-                <a href="https://github.com/vennfilbert">GitHub</a>
-            </div>
-            <p class="copyright">&copy; 2025 Steven Filbert</p>
-        </div>
-    </footer>
-
-    <div id="gallery-modal" class="modal">
-        <span class="close-btn">&times;</span>
-        <div class="modal-content">
-            <a class="prev-btn">&#10094;</a>
-            <img id="modal-image" src="" alt="Project Screenshot">
-            <a class="next-btn">&#10095;</a>
-        </div>
+      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+  </nav>
 
-    <script src="js/script.js"></script>
+  <header class="hero" id="top">
+    <div class="hero__grid" aria-hidden="true"></div>
+    <div class="hero__glow" aria-hidden="true"></div>
+
+    <div class="wrap hero__inner">
+      <div class="hero__main">
+        <p class="eyebrow">IT Service Desk <span class="g">/</span> Technical Support</p>
+
+        <h1 class="bigname"><span class="g">STEVEN</span><span class="w">FILBERT</span></h1>
+
+        <p class="hero__line" id="typeline" aria-live="polite">
+          <span id="typetext"></span><span class="caret" aria-hidden="true"></span>
+        </p>
+
+        <p class="hero__blurb">
+          Cyber Security graduate building a career in first-line IT support. I run my own
+          ServiceNow and detection labs, and I have spent three-plus years keeping calm in front
+          of 100 to 150+ people a shift.
+        </p>
+
+        <div class="hero__cta">
+          <a class="btn" href="#work">View work</a>
+          <a class="btn btn--ghost" href="assets/Steven Filbert - CV.pdf" download>Download CV</a>
+        </div>
+      </div>
+
+      <aside class="record record--status" aria-label="Availability">
+        <div class="record__bar">
+          <span class="record__id">STATUS</span>
+          <span class="pill pill--open"><i class="dot"></i>OPEN TO WORK</span>
+        </div>
+        <dl class="kv">
+          <dt>Queue</dt>
+          <dd>L1 Service Desk</dd>
+          <dt>Location</dt>
+          <dd>Sydney &middot; NSW</dd>
+          <dt>Work rights</dt>
+          <dd>Full &middot; to Aug 2027</dd>
+          <dt>Notice</dt>
+          <dd>Two weeks</dd>
+        </dl>
+      </aside>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ABOUT -->
+    <section class="sec" id="about">
+      <div class="wrap">
+        <div class="sechead reveal">
+          <span class="sechead__tag">01</span>
+          <h2>About</h2>
+          <span class="rule"></span>
+        </div>
+
+        <div class="about">
+          <div class="about__body reveal">
+            <p>
+              I am a Cyber Security graduate from Macquarie University, currently completing an
+              ACS-recognised IT Professional Year in the Help Desk stream. My focus is
+              <strong>first-line IT support</strong>: getting people working again quickly, writing the
+              ticket up properly, and escalating cleanly when it is not mine to fix.
+            </p>
+            <p>
+              My technical grounding is study and lab based rather than inherited from a previous IT
+              job. I built a ServiceNow developer instance and worked tickets end to end through it, and
+              I have hands-on SIEM experience from Hack The Box Academy labs using Splunk, Elastic and
+              Sysmon. Where there is a repo, it is linked below.
+            </p>
+            <p>
+              The people side is where I already have real mileage. I was promoted to
+              <em>Customer Service Supervisor</em> at Coles within about twenty months, where I am
+              first point of contact for 100 to 150+ customers a shift, reconcile $10,000+ daily, and
+              have trained and onboarded 10+ team members. Explaining a technical thing to a
+              non-technical person under time pressure is the part of support I am already good at.
+            </p>
+          </div>
+
+          <ul class="facts reveal">
+            <li><span class="facts__n">3+</span><span class="facts__l">Years customer-facing</span></li>
+            <li><span class="facts__n">10+</span><span class="facts__l">Staff trained &amp; onboarded</span></li>
+            <li><span class="facts__n">95–100%</span><span class="facts__l">Service KPI sustained</span></li>
+            <li><span class="facts__n">4</span><span class="facts__l">Documented lab projects</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- SKILLS -->
+      <section class="sec sec--alt" id="skills">
+        <div class="wrap">
+          <div class="sechead reveal">
+            <span class="sechead__tag">02</span>
+            <h2>Skills</h2>
+            <span class="rule"></span>
+          </div>
+
+          <p class="sec__note reveal">
+            Grouped by how I actually got them. I would rather be precise than impressive.
+          </p>
+
+          <div class="skills">
+            <div class="skillcol reveal">
+              <h3 class="skillcol__h"><span class="g">■</span> Certified</h3>
+              <p class="skillcol__sub">Passed exams</p>
+              <ul class="chips">
+                <li>Microsoft Azure Fundamentals (AZ-900)</li>
+                <li>Microsoft 365 Fundamentals (MS-900)</li>
+              </ul>
+            </div>
+
+            <div class="skillcol reveal">
+              <h3 class="skillcol__h"><span class="g">■</span> Hands-on lab</h3>
+              <p class="skillcol__sub">Built it, documented it, pushed it to GitHub</p>
+              <ul class="chips">
+                <li>ServiceNow</li>
+                <li>ITIL workflows</li>
+                <li>Splunk</li>
+                <li>Elastic</li>
+                <li>Sysmon</li>
+                <li>Windows event logs</li>
+              </ul>
+            </div>
+
+            <div class="skillcol reveal">
+              <h3 class="skillcol__h"><span class="g">■</span> Foundational</h3>
+              <p class="skillcol__sub">From the degree and coursework</p>
+              <ul class="chips">
+                <li>Windows 10 / 11</li>
+                <li>Microsoft 365</li>
+                <li>TCP/IP</li>
+                <li>DNS</li>
+                <li>DHCP</li>
+                <li>VLANs</li>
+                <li>Wireshark</li>
+                <li>Linux</li>
+                <li>Python</li>
+                <li>SQL</li>
+              </ul>
+            </div>
+
+            <div class="skillcol reveal">
+              <h3 class="skillcol__h"><span class="g">■</span> Service</h3>
+              <p class="skillcol__sub">Three-plus years, high volume</p>
+              <ul class="chips">
+                <li>Incident intake</li>
+                <li>Escalation</li>
+                <li>Documentation</li>
+                <li>Onboarding &amp; training</li>
+                <li>Calm under pressure</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WORK -->
+      <section class="sec" id="work">
+        <div class="wrap">
+          <div class="sechead reveal">
+            <span class="sechead__tag">03</span>
+            <h2>Work</h2>
+            <span class="rule"></span>
+          </div>
+
+          <p class="sec__note reveal">
+            Self-directed labs and university projects, written up the way I would write up a ticket.
+          </p>
+
+          <div class="records">
+
+            <!-- ServiceNow lab -->
+            <article class="record reveal gallery-trigger" data-gallery="servicenow">
+              <div class="record__bar">
+                <span class="record__id">LAB0000001</span>
+                <span class="pill"><i class="dot"></i>RESOLVED</span>
+              </div>
+              <div class="record__body">
+                <h3 class="record__title">ServiceNow ITIL Service Desk Lab</h3>
+                <p class="record__meta">Self-directed home lab &middot; Jul 2026</p>
+
+                <dl class="kv kv--wide">
+                  <dt>Objective</dt>
+                  <dd>Practise end-to-end L1 service desk handling in a realistic ITSM environment.</dd>
+                  <dt>Actions</dt>
+                  <dd>Worked seven tickets end to end: logging, categorising, setting impact and urgency,
+                    adding work notes and closing with proper resolution codes. Escalated a VPN incident
+                    and a Priority 1 major incident to the correct team.</dd>
+                  <dt>Resolution</dt>
+                  <dd>Six knowledge base articles written for common L1 tasks, with the full build
+                    documented in screenshots.</dd>
+                </dl>
+
+                <ul class="tech">
+                  <li>ServiceNow</li>
+                  <li>ITIL</li>
+                  <li>Incident &amp; Request</li>
+                  <li>Knowledge Base</li>
+                </ul>
+
+                <a class="btn btn--sm" href="https://github.com/vennfilbert/servicenow-service-desk-lab" target="_blank"
+                  rel="noopener">Open repository</a>
+                <p class="record__hint">Click card for ticket lifecycle screenshots</p>
+              </div>
+            </article>
+
+            <!-- Kerberoasting lab -->
+            <article class="record reveal gallery-trigger" data-gallery="kerberoasting">
+              <div class="record__bar">
+                <span class="record__id">LAB0000002</span>
+                <span class="pill"><i class="dot"></i>RESOLVED</span>
+              </div>
+              <div class="record__body">
+                <h3 class="record__title">Kerberoasting Detection Lab</h3>
+                <p class="record__meta">Self-directed home lab &middot; Jun 2026</p>
+
+                <dl class="kv kv--wide">
+                  <dt>Objective</dt>
+                  <dd>Detect a Kerberoasting attempt hidden inside a high volume of Windows Kerberos
+                    service-ticket events using a SIEM.</dd>
+                  <dt>Actions</dt>
+                  <dd>Ingested roughly 160 Windows Security 4769 events into a local Splunk instance,
+                    configured source types and event breaking, then wrote SPL detections using
+                    <code>rex</code> field extraction and <code>stats</code> to filter for RC4 encryption
+                    and non-machine service accounts.
+                  </dd>
+                  <dt>Resolution</dt>
+                  <dd>Isolated the single attack among the noise, corroborated with request-volume
+                    analysis, and built a three-panel detection dashboard.</dd>
+                </dl>
+
+                <ul class="tech">
+                  <li>Splunk</li>
+                  <li>SPL</li>
+                  <li>Sysmon</li>
+                  <li>Windows Event Logs</li>
+                </ul>
+
+                <a class="btn btn--sm" href="https://github.com/vennfilbert/kerberoasting-detection-lab" target="_blank"
+                  rel="noopener">Open repository</a>
+                <p class="record__hint">Click card for Splunk dashboard and detection screenshots</p>
+              </div>
+            </article>
+
+            <!-- SecureLink -->
+            <article class="record reveal gallery-trigger" data-gallery="securelink">
+              <div class="record__bar">
+                <span class="record__id">PRJ0000003</span>
+                <span class="pill"><i class="dot"></i>DISTINCTION</span>
+              </div>
+              <div class="record__body">
+                <h3 class="record__title">SecureLink &mdash; Privacy-Preserving Record Linkage</h3>
+                <p class="record__meta">Research internship &middot; Macquarie University &middot; Feb–Jul 2025</p>
+
+                <dl class="kv kv--wide">
+                  <dt>Objective</dt>
+                  <dd>Match 1,000+ unstructured records accurately without exposing personal data,
+                    balancing matching accuracy against privacy.</dd>
+                  <dt>Actions</dt>
+                  <dd>Owned the XGBoost classifier across raw, Local Differential Privacy and Bloom
+                    filter configurations, and integrated the model into a React dashboard. Ran 30+
+                    experiments on the privacy-utility trade-off.</dd>
+                  <dt>Result</dt>
+                  <dd>Baseline F1 of approximately 0.91, with only about 1.7% F1 reduction once Local
+                    Differential Privacy was applied.</dd>
+                </dl>
+
+                <ul class="tech">
+                  <li>Python</li>
+                  <li>XGBoost</li>
+                  <li>Scikit-learn</li>
+                  <li>React</li>
+                </ul>
+
+                <div class="record__actions">
+                  <a class="btn btn--sm" href="https://github.com/vennfilbert/securelink-project" target="_blank"
+                    rel="noopener">Open repository</a>
+                  <a class="btn btn--sm btn--ghost" href="assets/Steven Filbert - Data Privacy Project Summary.pdf"
+                    target="_blank" rel="noopener">Project summary (PDF)</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- SafeUs -->
+            <article class="record reveal gallery-trigger" data-gallery="safeus">
+              <div class="record__bar">
+                <span class="record__id">PRJ0000004</span>
+                <span class="pill"><i class="dot"></i>DISTINCTION</span>
+              </div>
+              <div class="record__body">
+                <h3 class="record__title">SafeUs &mdash; Mobile Reporting App</h3>
+                <p class="record__meta">University project &middot; Macquarie University &middot; Apr–Jul 2025</p>
+
+                <dl class="kv kv--wide">
+                  <dt>Objective</dt>
+                  <dd>Build a cross-platform app for geotagged incident reporting with secure access and
+                    live data.</dd>
+                  <dt>Actions</dt>
+                  <dd>Developed the app in Flutter with Firebase authentication, Firestore and the GPS
+                    API, handling secure sign-in and real-time updates across platforms.</dd>
+                  <dt>Result</dt>
+                  <dd>Delivered a working cross-platform reporting app. Click through for screenshots.</dd>
+                </dl>
+
+                <ul class="tech">
+                  <li>Flutter</li>
+                  <li>Dart</li>
+                  <li>Firebase</li>
+                  <li>Firestore</li>
+                </ul>
+
+                <p class="record__hint">Source code private &middot; click card for screenshots</p>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- CREDENTIALS -->
+      <section class="sec sec--alt" id="creds">
+        <div class="wrap">
+          <div class="sechead reveal">
+            <span class="sechead__tag">04</span>
+            <h2>Credentials</h2>
+            <span class="rule"></span>
+          </div>
+
+          <ol class="tl">
+            <li class="tl__item reveal">
+              <span class="tl__when">Mar 2026 &ndash; present</span>
+              <div class="tl__what">
+                <h3>IT Professional Year <span class="tl__sub">ACS-recognised, Help Desk stream</span></h3>
+                <p>Performance Education, Sydney. Workplace communication, Australian business culture,
+                  professional documentation and an industry internship placement.</p>
+              </div>
+            </li>
+            <li class="tl__item reveal">
+              <span class="tl__when">Jan 2026</span>
+              <div class="tl__what">
+                <h3>Microsoft 365 Fundamentals <span class="tl__sub">MS-900</span></h3>
+                <p>Microsoft 365 services, security, compliance and licensing fundamentals.</p>
+              </div>
+            </li>
+            <li class="tl__item reveal">
+              <span class="tl__when">Nov 2025</span>
+              <div class="tl__what">
+                <h3>Microsoft Azure Fundamentals <span class="tl__sub">AZ-900</span></h3>
+                <p>Cloud concepts, core Azure services, identity, governance and cost management.</p>
+              </div>
+            </li>
+            <li class="tl__item reveal">
+              <span class="tl__when">Jul 2023 &ndash; Jul 2025</span>
+              <div class="tl__what">
+                <h3>Bachelor of Cyber Security <span class="tl__sub">WAM 76.13</span></h3>
+                <p>Macquarie University. High Distinctions in Digital Forensics (93) and Offensive
+                  Security (88), Distinction in Applied Cryptography (78).</p>
+              </div>
+            </li>
+            <li class="tl__item reveal">
+              <span class="tl__when">Jul 2022 &ndash; May 2023</span>
+              <div class="tl__what">
+                <h3>Diploma of Information Technology <span class="tl__sub">WAM 78.75</span></h3>
+                <p>Macquarie University.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+  </main>
+
+  <footer class="foot" id="contact">
+    <div class="wrap">
+      <div class="foot__grid">
+        <div class="reveal">
+          <p class="eyebrow">Get in touch</p>
+          <h2 class="foot__h">Open to junior IT support<br>and service desk roles.</h2>
+          <p class="foot__sub">Sydney based, full working rights, two weeks notice.</p>
+        </div>
+
+        <div class="foot__links reveal">
+          <a class="lnk" href="mailto:steven7f@gmail.com">
+            <span class="lnk__k">Email</span>
+            <span class="lnk__v">steven7f@gmail.com</span>
+          </a>
+          <a class="lnk" href="https://www.linkedin.com/in/steven-filbert-681459230/" target="_blank" rel="noopener">
+            <span class="lnk__k">LinkedIn</span>
+            <span class="lnk__v">/in/steven-filbert</span>
+          </a>
+          <a class="lnk" href="https://github.com/vennfilbert" target="_blank" rel="noopener">
+            <span class="lnk__k">GitHub</span>
+            <span class="lnk__v">/vennfilbert</span>
+          </a>
+          <a class="lnk" href="tel:+61493530098">
+            <span class="lnk__k">Phone</span>
+            <span class="lnk__v">0493 530 098</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="foot__base">
+        <span class="mark__badge sm"><span class="g">V</span><span class="w">N</span></span>
+        <span>&copy; <span id="year">2026</span> Steven Filbert</span>
+        <span class="foot__dot">&middot;</span>
+        <span>Built from scratch. No template.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Gallery -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Project screenshots">
+    <button class="modal__close" id="modalClose" aria-label="Close">&times;</button>
+    <button class="modal__nav modal__nav--prev" id="modalPrev" aria-label="Previous">&#10094;</button>
+    <figure class="modal__fig">
+      <img id="modalImg" src="" alt="">
+      <figcaption id="modalCount"></figcaption>
+    </figure>
+    <button class="modal__nav modal__nav--next" id="modalNext" aria-label="Next">&#10095;</button>
+  </div>
+
+  <script src="js/script.js"></script>
 </body>
 
 </html>

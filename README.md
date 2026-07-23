@@ -1,33 +1,53 @@
-# Hi there, I'm Steven Filbert 👋
+# Steven Filbert
 
-I'm a recent **Bachelor of Cyber Security graduate** from Macquarie University, **specializing in Governance, Risk, and Compliance (GRC)**. I have a passion for solving complex problems at the intersection of data, privacy, and security, demonstrated through hands-on internship experience engineering privacy-preserving solutions. I am actively seeking junior analyst opportunities where I can apply my GRC knowledge and technical skills.
+Cyber Security graduate from Macquarie University, based in Sydney. Currently completing an
+ACS-recognised IT Professional Year in the Help Desk stream and looking for a junior IT service
+desk or technical support role.
 
----
-
-### 🔧 Technologies & Skills
-
-* **Cybersecurity & GRC:** Governance, Risk & Compliance (GRC), ISO 27001, Data Privacy, Digital Forensics (HD, 93), Offensive Security (HD, 88), Risk Assessment, Cryptography
-* **Programming & Data:** Python, SQL, Machine Learning (XGBoost)
-* **Tools & Cloud:** Microsoft Azure, Git, VSCode
-* **Familiar With:** JavaScript, HTML/CSS, Firebase, Flutter, Dart
+Three years on the front line in customer service. The technical side is study and lab based,
+and everything I claim is documented in a repo here.
 
 ---
 
-### 🌱 What I'm Currently Working On
+### Projects
 
-* Deepening my understanding of GRC frameworks like ISO 27001 and NIST.
-* Preparing for the **Microsoft Security, Compliance, and Identity Fundamentals (SC-900)** and **CompTIA Security+** certifications.
-* Exploring practical applications of applied cryptography.
-
----
-
-### 🚀 Check out my Portfolio
-
-* **Live Portfolio Website:** https://vennfilbert.github.io
+| Project | What it is |
+|---|---|
+| [ServiceNow ITIL Service Desk Lab](https://github.com/vennfilbert/servicenow-service-desk-lab) | Seven tickets worked end to end in a developer instance: logging, categorisation, impact and urgency, work notes, resolution codes. VPN escalation and a P1 major incident. Six knowledge base articles. |
+| [Kerberoasting Detection Lab](https://github.com/vennfilbert/kerberoasting-detection-lab) | Ingested ~160 Windows Security 4769 events into local Splunk. SPL detections using `rex` and `stats` to filter RC4 and non-machine service accounts. Three-panel dashboard. |
+| [SecureLink](https://github.com/vennfilbert/securelink-project) | Privacy-preserving record linkage. Owned the XGBoost classifier across raw, Local Differential Privacy and Bloom filter configurations. Baseline F1 ~0.91, ~1.7% reduction under LDP. Distinction. |
 
 ---
 
-### 📫 How to Reach Me
+### Skills
 
-* **LinkedIn:** https://www.linkedin.com/in/steven-filbert-681459230/
-* **Email:** steven7f@gmail.com
+Grouped by how I got them rather than flattened into one list.
+
+**Certified**
+Microsoft Azure Fundamentals (AZ-900) · Microsoft 365 Fundamentals (MS-900)
+
+**Hands-on lab**
+ServiceNow · ITIL workflows · Splunk · Elastic · Sysmon · Windows event logs
+
+**Foundational, from coursework**
+Windows 10/11 · Microsoft 365 · TCP/IP · DNS · DHCP · VLANs · Wireshark · Linux · Python · SQL
+
+**Service**
+Incident intake · Escalation · Documentation · Onboarding and training
+
+---
+
+### Currently
+
+- IT Professional Year, Help Desk stream, Performance Education, finishing March 2027
+- Working through the Google Cybersecurity Certificate, then CompTIA Network+ and Security+
+- Building out the home lab: ticket handling, detection engineering, network troubleshooting
+- Blue team fundamentals through Hack The Box Academy
+
+---
+
+### Contact
+
+- Portfolio: https://vennfilbert.github.io
+- LinkedIn: https://www.linkedin.com/in/steven-filbert-681459230/
+- Email: steven7f@gmail.com
