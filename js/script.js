@@ -164,12 +164,8 @@ document.addEventListener('DOMContentLoaded', () => {
     paint();
   };
 
-  document.querySelectorAll('.gallery-trigger').forEach(card => {
-    card.addEventListener('click', e => {
-      // let real links inside the card behave normally
-      if (e.target.closest('a')) return;
-      open(card.dataset.gallery);
-    });
+  document.querySelectorAll('[data-gallery]').forEach(btn => {
+    btn.addEventListener('click', () => open(btn.dataset.gallery));
   });
 
   if (modal) {

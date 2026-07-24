@@ -219,7 +219,7 @@
           <div class="records">
 
             <!-- ServiceNow lab -->
-            <article class="record reveal gallery-trigger" data-gallery="servicenow">
+            <article class="record reveal">
               <div class="record__bar">
                 <span class="record__id">LAB0000001</span>
                 <span class="pill"><i class="dot"></i>RESOLVED</span>
@@ -246,15 +246,18 @@
                   <li>Incident &amp; Request</li>
                   <li>Knowledge Base</li>
                 </ul>
-
-                <a class="btn btn--sm" href="https://github.com/vennfilbert/servicenow-service-desk-lab" target="_blank"
-                  rel="noopener">Open repository</a>
-                <p class="record__hint">Click card for ticket lifecycle screenshots</p>
+                <div class="record__actions">
+                  <a class="btn btn--sm" href="https://github.com/vennfilbert/servicenow-service-desk-lab"
+                    target="_blank" rel="noopener">Open repository</a>
+                  <button type="button" class="btn btn--sm btn--ghost" data-gallery="servicenow">View
+                    screenshots</button>
+                </div>
               </div>
             </article>
 
             <!-- Kerberoasting lab -->
-            <article class="record reveal gallery-trigger" data-gallery="kerberoasting">
+            <article class="record reveal">
+
               <div class="record__bar">
                 <span class="record__id">LAB0000002</span>
                 <span class="pill"><i class="dot"></i>RESOLVED</span>
@@ -285,14 +288,17 @@
                   <li>Windows Event Logs</li>
                 </ul>
 
-                <a class="btn btn--sm" href="https://github.com/vennfilbert/kerberoasting-detection-lab" target="_blank"
-                  rel="noopener">Open repository</a>
-                <p class="record__hint">Click card for Splunk dashboard and detection screenshots</p>
+                <div class="record__actions">
+                  <a class="btn btn--sm" href="https://github.com/vennfilbert/kerberoasting-detection-lab"
+                    target="_blank" rel="noopener">Open repository</a>
+                  <button type="button" class="btn btn--sm btn--ghost" data-gallery="kerberoasting">View
+                    screenshots</button>
+                </div>
               </div>
             </article>
 
             <!-- SecureLink -->
-            <article class="record reveal gallery-trigger" data-gallery="securelink">
+            <article class="record reveal">
               <div class="record__bar">
                 <span class="record__id">PRJ0000003</span>
                 <span class="pill"><i class="dot"></i>DISTINCTION</span>
@@ -331,7 +337,8 @@
             </article>
 
             <!-- SafeUs -->
-            <article class="record reveal gallery-trigger" data-gallery="safeus">
+            <article class="record reveal">
+
               <div class="record__bar">
                 <span class="record__id">PRJ0000004</span>
                 <span class="pill"><i class="dot"></i>DISTINCTION</span>
@@ -357,8 +364,10 @@
                   <li>Firebase</li>
                   <li>Firestore</li>
                 </ul>
-
-                <p class="record__hint">Source code private &middot; click card for screenshots</p>
+                <p class="record__hint">Source code private &middot; screenshots only</p>
+                <div class="record__actions">
+                  <button type="button" class="btn btn--sm btn--ghost" data-gallery="safeus">View screenshots</button>
+                </div>
               </div>
             </article>
 
@@ -451,8 +460,6 @@
       <div class="foot__base">
         <span class="mark__badge sm"><span class="g">V</span><span class="w">N</span></span>
         <span>&copy; <span id="year">2026</span> Steven Filbert</span>
-        <span class="foot__dot">&middot;</span>
-        <span>Built from scratch. No template.</span>
       </div>
     </div>
   </footer>
