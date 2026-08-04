@@ -16,7 +16,7 @@ Cyber Security graduate from Macquarie University, based in Sydney. Currently co
 ACS-recognised IT Professional Year in the Help Desk stream and looking for a junior IT service
 desk or technical support role.
 
-Three years on the front line in customer service. The technical side is study and lab based,
+Four years on the front line in customer service. The technical side is study and lab based,
 and everything I claim is documented in a repo here.
 
 ```
@@ -126,16 +126,14 @@ Incident intake · Escalation · Documentation · Onboarding and training
 IN PROGRESS ─────────────────────────────────────────
   [~]  IT Professional Year, Help Desk stream
        Performance Education · finishing Mar 2027
-  [~]  Google Cybersecurity Certificate
-       then CompTIA Network+, then Security+
+  [~]  CompTIA Network+, then Security+
   [~]  Home lab: ticket handling, detection
        engineering, network troubleshooting
-  [~]  Blue team fundamentals via HTB Academy
 ──────────────────────────────────────────────────────
 ```
 
 ---
 
 <div align="center">
-<sub>steven7f@gmail.com · Sydney NSW · <a href="https://vennfilbert.github.io">vennfilbert.github.io</a></sub>
+<sub>steven7f@gmail.com · Sydney NSW · <a href="https://venneve.vercel.app">venneve.vercel.app</a></sub>
 </div>
