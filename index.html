@@ -106,16 +106,19 @@
         <div class="about">
           <div class="about__body reveal">
             <p>
-              I am a Cyber Security graduate from Macquarie University, currently completing an
-              ACS-recognised IT Professional Year in the Help Desk stream. My focus is
-              <strong>first-line IT support</strong>: getting people working again quickly, writing the
-              ticket up properly, and escalating cleanly when it is not mine to fix.
+              My focus is <strong>first-line IT support</strong>: getting people working again quickly,
+              writing the ticket up properly, and escalating cleanly when it is not mine to fix. I am
+              completing an ACS-recognised IT Professional Year in the Help Desk stream, and I hold a
+              Cyber Security degree from Macquarie University.
             </p>
             <p>
               My technical grounding is study and lab based rather than inherited from a previous IT
-              job. I built a ServiceNow developer instance and worked tickets end to end through it, and
-              I have hands-on SIEM experience from Hack The Box Academy labs using Splunk, Elastic and
-              Sysmon. Where there is a repo, it is linked below.
+              job, and it is documented rather than asserted. I built a Windows Server 2025 domain from
+              scratch and worked through what a service desk sees daily: account lockouts and resets,
+              Group Policy, and share and NTFS permissions, including four faults I had to diagnose
+              along the way. I built a ServiceNow developer instance and worked tickets end to end
+              through it, and I have SIEM experience from Hack The Box Academy labs using Splunk,
+              Elastic and Sysmon. Where there is a repo, it is linked below.
             </p>
             <p>
               The people side is where I already have real mileage. I was promoted to
@@ -124,13 +127,18 @@
               have trained and onboarded 10+ team members. Explaining a technical thing to a
               non-technical person under time pressure is the part of support I am already good at.
             </p>
+            <p>
+              Security is the direction I am building towards, and the service desk is where I want to
+              start. The two overlap more than they look: account lockouts, permissions and Group Policy
+              are daily support work, and they are also where most incidents begin.
+            </p>
           </div>
 
           <ul class="facts reveal">
             <li><span class="facts__n">3+</span><span class="facts__l">Years customer-facing</span></li>
             <li><span class="facts__n">10+</span><span class="facts__l">Staff trained &amp; onboarded</span></li>
             <li><span class="facts__n">95–100%</span><span class="facts__l">Service KPI sustained</span></li>
-            <li><span class="facts__n">4</span><span class="facts__l">Documented lab projects</span></li>
+            <li><span class="facts__n">5</span><span class="facts__l">Documented lab projects</span></li>
           </ul>
         </div>
       </div>
@@ -162,10 +170,15 @@
               <h3 class="skillcol__h"><span class="g">■</span> Hands-on lab</h3>
               <p class="skillcol__sub">Built it, documented it, pushed it to GitHub</p>
               <ul class="chips">
+                <li>Active Directory</li>
+                <li>Windows Server 2025</li>
+                <li>Group Policy</li>
+                <li>PowerShell</li>
+                <li>NTFS &amp; share permissions</li>
+                <li>DNS</li>
                 <li>ServiceNow</li>
                 <li>ITIL workflows</li>
                 <li>Splunk</li>
-                <li>Elastic</li>
                 <li>Sysmon</li>
                 <li>Windows event logs</li>
               </ul>
@@ -178,8 +191,8 @@
                 <li>Windows 10 / 11</li>
                 <li>Microsoft 365</li>
                 <li>TCP/IP</li>
-                <li>DNS</li>
                 <li>DHCP</li>
+                <li>Elastic</li>
                 <li>VLANs</li>
                 <li>Wireshark</li>
                 <li>Linux</li>
@@ -218,10 +231,57 @@
 
           <div class="records">
 
-            <!-- ServiceNow lab -->
+            <!-- Active Directory lab -->
             <article class="record reveal">
               <div class="record__bar">
                 <span class="record__id">LAB0000001</span>
+                <span class="pill"><i class="dot"></i>RESOLVED</span>
+              </div>
+              <div class="record__body">
+                <h3 class="record__title">Active Directory Home Lab</h3>
+                <p class="record__meta">Self-directed home lab &middot; Jul&ndash;Aug 2026</p>
+
+                <dl class="kv kv--wide">
+                  <dt>Objective</dt>
+                  <dd>Build a working Windows domain from scratch and practise the tasks a service desk
+                    handles daily, rather than reading about them.</dd>
+                  <dt>Actions</dt>
+                  <dd>Promoted a Windows Server 2025 domain controller to a new forest running AD DS and
+                    DNS, joined a Windows 11 client over a static 10.10.10.0/24 network, and built an OU
+                    structure with users, security groups and distribution groups. Triggered a real
+                    account lockout from the client, found it with <code>Search-ADAccount</code>, then
+                    unlocked, reset and forced a password change. Created a Group Policy Object,
+                    diagnosed why it did not apply, and fixed it. Configured a file share with Full
+                    Control at the share level and Modify on NTFS, breaking inheritance so every entry
+                    was explicit.</dd>
+                  <dt>Resolution</dt>
+                  <dd>Verified from the client as a group member and as a non-member. Four faults hit
+                    along the way are documented with the diagnosis rather than just the fix, including
+                    a GPO that was out of scope because the computer object was still in the default
+                    Computers container. 31 screenshots and a troubleshooting reference.</dd>
+                </dl>
+
+                <ul class="tech">
+                  <li>Active Directory</li>
+                  <li>Windows Server 2025</li>
+                  <li>Group Policy</li>
+                  <li>PowerShell</li>
+                  <li>NTFS Permissions</li>
+                </ul>
+
+                <div class="record__actions">
+                  <a class="btn btn--sm" href="https://github.com/vennfilbert/active-directory-home-lab"
+                    target="_blank" rel="noopener">Open repository</a>
+                  <button type="button" class="btn btn--sm btn--ghost" data-gallery="activedirectory">View
+                    screenshots</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- ServiceNow lab -->
+            <article class="record reveal">
+              <div class="record__bar">
+                <span class="record__id">LAB0000002</span>
                 <span class="pill"><i class="dot"></i>RESOLVED</span>
               </div>
               <div class="record__body">
@@ -259,7 +319,7 @@
             <article class="record reveal">
 
               <div class="record__bar">
-                <span class="record__id">LAB0000002</span>
+                <span class="record__id">LAB0000003</span>
                 <span class="pill"><i class="dot"></i>RESOLVED</span>
               </div>
               <div class="record__body">
@@ -300,7 +360,7 @@
             <!-- SecureLink -->
             <article class="record reveal">
               <div class="record__bar">
-                <span class="record__id">PRJ0000003</span>
+                <span class="record__id">PRJ0000004</span>
                 <span class="pill"><i class="dot"></i>DISTINCTION</span>
               </div>
               <div class="record__body">
@@ -340,7 +400,7 @@
             <article class="record reveal">
 
               <div class="record__bar">
-                <span class="record__id">PRJ0000004</span>
+                <span class="record__id">PRJ0000005</span>
                 <span class="pill"><i class="dot"></i>DISTINCTION</span>
               </div>
               <div class="record__body">

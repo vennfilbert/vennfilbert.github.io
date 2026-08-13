@@ -47,6 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (target) {
     const lines = [
       'AZ-900 / MS-900 certified',
+      'Active Directory home lab, domain to permissions',
       'ServiceNow + ITIL, built and documented',
       'Splunk detection labs, Sydney based',
       '3+ years front line, 100-150 people a shift'
@@ -91,6 +92,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------- Gallery ---------- */
   const galleries = {
+    activedirectory: [
+      'images/active_directory_lab/09-ou-structure.png',
+      'images/active_directory_lab/16-search-lockedout.png',
+      'images/active_directory_lab/23-gpresult-before.png',
+      'images/active_directory_lab/25-gpresult-after.png',
+      'images/active_directory_lab/29-share-and-ntfs-acl.png',
+      'images/active_directory_lab/31-sfilbert-denied.png'
+    ],
     safeus: [
       'images/safeus/HomeScreen.png',
       'images/safeus/LoginScreen.png',
