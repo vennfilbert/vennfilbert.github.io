@@ -16,15 +16,7 @@ Cyber Security graduate from Macquarie University, based in Sydney. Currently co
 ACS-recognised IT Professional Year in the Help Desk stream and looking for a junior IT service
 desk or technical support role.
 
-<<<<<<< HEAD
-Service desk is where I want to start, and security is the direction I am building towards. The
-two are closer than they look: account lockouts, permissions and Group Policy are service desk
-work and they are also where most incidents begin.
-
-Three years on the front line in customer service. The technical side is study and lab based,
-=======
 Four years on the front line in customer service. The technical side is study and lab based,
->>>>>>> 50b319a8b449b0fb2d57c885ecd1a9554e532479
 and everything I claim is documented in a repo here.
 
 ```
