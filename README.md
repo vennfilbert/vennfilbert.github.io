@@ -16,11 +16,15 @@ Cyber Security graduate from Macquarie University, based in Sydney. Currently co
 ACS-recognised IT Professional Year in the Help Desk stream and looking for a junior IT service
 desk or technical support role.
 
+<<<<<<< HEAD
 Service desk is where I want to start, and security is the direction I am building towards. The
 two are closer than they look: account lockouts, permissions and Group Policy are service desk
 work and they are also where most incidents begin.
 
 Three years on the front line in customer service. The technical side is study and lab based,
+=======
+Four years on the front line in customer service. The technical side is study and lab based,
+>>>>>>> 50b319a8b449b0fb2d57c885ecd1a9554e532479
 and everything I claim is documented in a repo here.
 
 ```
@@ -155,17 +159,29 @@ Incident intake · Escalation · Documentation · Onboarding and training
 
 ```
 IN PROGRESS ─────────────────────────────────────────
+<<<<<<< HEAD
   [ ]  IT Professional Year, Help Desk stream
        Performance Education
   [ ]  CompTIA Network+ · exam 22 September 2026
   [ ]  CompTIA Security+ · exam 3 November 2026
   [ ]  Home lab: directory services, ticket
        handling, detection engineering
+=======
+  [~]  IT Professional Year, Help Desk stream
+       Performance Education · finishing Mar 2027
+  [~]  CompTIA Network+, then Security+
+  [~]  Home lab: ticket handling, detection
+       engineering, network troubleshooting
+>>>>>>> 50b319a8b449b0fb2d57c885ecd1a9554e532479
 ──────────────────────────────────────────────────────
 ```
 
 ---
 
 <div align="center">
+<<<<<<< HEAD
 <sub>steven7f@gmail.com · Sydney NSW · <a href="https://venneve.vercel.app/">venneve.vercel.app</a></sub>
+=======
+<sub>steven7f@gmail.com · Sydney NSW · <a href="https://venneve.vercel.app">venneve.vercel.app</a></sub>
+>>>>>>> 50b319a8b449b0fb2d57c885ecd1a9554e532479
 </div>
